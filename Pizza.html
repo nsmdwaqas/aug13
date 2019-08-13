@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pete's Pizza Delivery</title>
+    <script src="Script.js" > </script>
+
+    <style>
+        table {
+            margin: auto;
+            padding: 1em;
+           }
+
+        td {
+            padding: 0 0.5em;
+            vertical-align: top;
+        }
+    </style>
+   
+</head>
+
+<body  >
+
+    <h1 style="text-align: center;">Pete's Pizza Delivery</h1>
+    <hr red>
+    <h2 style="text-align: center;">Online Order Form</h2>
+    <hr black>
+    <form method="post">
+        <table>
+            <tr>
+                <td style="text-align: right;"><label for="name">*Name: </label></td>
+                <td><input type="text" name="name" id="name" required /></td>
+                <td style="text-align: right;"><label for="tel">*Tel: </label></td>
+                <td><input type="tel" name="tel" id="tel" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="addr">*Address: </label></td>
+                <td><input type="text" name="addr" id="addr" required /></td>
+                <td style="text-align: right;"><label for="mail">*Email: </label></td>
+                <td><input type="email" name="mail" id="mail" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="town">*Town/city: </label></td>
+                <td><input type="text" name="town" id="town" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="pcode">*Postcode: </label></td>
+                <td><input type="text" name="pcode" id="pcode" required /></td>
+            </tr>
+        </table>
+
+        <p style="text-align: center;">* required fields</p>
+
+        <table>
+            <tr>
+                <td>
+                    <h3>Topping</h3>
+                    <label><input type=radio name=topping id="marg" required value=50 /> Margherita</label><br />
+                    <label><input type=radio name=topping id="four" required value=100 /> Four Seasons</label><br />
+                    <label><input type=radio name=topping id="meat" required value=150 /> Meat Feast</label><br />
+                </td>
+                <td>
+                    <h3>Size</h3>
+                    <label><input type=radio name=base id="s" required value=275 /> Small</label><br />
+                    <label><input type=radio name=base id="m" required value=325 /> Medium</label><br />
+                    <label><input type=radio name=base id="l" required value=415 /> Large</label><br />
+                </td>
+                <td>
+                    <h3>Extras</h3>
+                    <label><input type=checkbox name=extra id="mu" value=75 /> Mushrooms</label><br />
+                    <label><input type=checkbox name=extra id="pe" value=50 /> Green peppers</label><br />
+                    <label><input type=checkbox name=extra id="an" value=65 /> Anchovies</label><br />
+                    <label><input type=checkbox name=extra id="ch" value=20 /> Extra cheese</label><br />
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+        <table>
+            <tr>
+                <td style="text-align: right;"><label for="del">Preferred delivery time: </label></td>
+                <td><input type=time min="11:00" max="21:00" step="900" name="del" id="del" required /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;"><label for="instr">Delivery instructions: </label></td>
+                <td><textarea name="instr" id="instr" maxlength=1000></textarea></td>
+
+            </tr>
+            <!--<tr>
+                <td> toping :<input type="number" name="topi" readonly id="topi" placeholder="tops cost"> </td>
+                <td> size :<input type="number" name="siz" readonly id="siz" placeholder="size cost"> </td>
+                <td> Extra :<input type="number" name="ext" readonly id="ext" placeholder="extra cost"> </td>
+                <td> Cost :<input type="number" name="total" readonly id="total" placeholder="Estimated cost"> </td>
+
+            </tr>-->
+            
+
+
+
+
+        </table>
+    </form>
+     <input type="button" id="sub" value=" Submit" onclick="to()">
+
+    <center> <p id="po"> </p> </center>
+</body>
+</html>
